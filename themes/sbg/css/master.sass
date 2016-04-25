@@ -1,0 +1,333 @@
+@import "compass/css3"
+
+/***************************************************************************************/
+/**-------------------------- VARIABLES ---------------------------------------------**/
+/***************************************************************************************/
+
+$violet_color             : #333A5C
+
+$gray_separator           : #D2D2D2
+$gray_color               : #737373
+$gray_color_subtitles     : #717171
+$gray_bg                  : #CECED0
+
+$green_color_title_article: #5D8848
+
+$blue_color               : #004C91
+$skyblue_color            : #009CDE
+
+/***************************************************************************************/
+/**-------------------------- RESET --------------------------------------------------**/
+/***************************************************************************************/
+
+body,html
+	font-size: 16px
+	width    : 100% 
+
+/***************************************************************************************/
+/**-------------------------- SECCIONES EN COMUN -------------------------------------**/
+/***************************************************************************************/
+
+//Posicion relativa
+/*°|| =================> POSICION RELATIVA */
+.relative
+	position: relative
+
+//Contenedor con display flex
+.container-flex
+	display        : flex
+	flex-wrap      : wrap 
+	justify-content: center
+.container-flex-center
+	align-items: center 
+
+//LINEA SEPARADORA
+/*°|| =========> */
+.line-separator
+	background: $gray_separator
+	display   : block 
+	height    : 3px
+	margin    : 37px 15px
+
+
+//BOTONES 
+/*°|| ======> BOTON VER MAS */
+.btn__show-more
+	border         : 1px solid
+	color          : #fff !important
+	display        : inline-block 
+	padding        : 8px 15px
+	text-align     : center
+	text-decoration: none !important
+	+transition( all 500ms ease )
+	//hover
+	&:hover 
+		+scale( 1.2 )
+
+
+
+/*|| ==== >>>>>>>>>>>>>> REDES SOCIALES */
+
+//ul 
+.social-links
+	list-style-type: none 
+	margin         : 0 auto 
+	padding        : 0
+	text-align     : right 
+	li 
+		color         : $violet_color
+		display       : inline-block
+		font-size     : 0.9375rem
+		font-weight   : 600 
+		padding       : 0 7px 
+		vertical-align: middle
+		// link - a
+		a 
+			display : block
+			img 
+				+transition( all 700ms ease )
+				position: relative
+				z-index : 99
+
+			&:hover 
+				img
+					+opacity(0.9)
+					+rotateY( 360deg )
+
+/*°|| =================>> TITULOS */
+
+/*°|| =================>> SUBTITULOS */
+.PageCommon__subtitle
+	color      : $gray_color_subtitles
+	font-size  : 1.5625em 
+	margin     : 0 auto 11px
+
+//subtitulo color azul
+.PageCommon__subtitle--blue 
+	border-left: 3px solid $gray_color
+	color      : $blue_color
+	padding    : 0 0 0 11px 
+
+
+//°|| ============>> SECCION ARTICULOS <<========================== ||°*/
+/*----------------------------------------------------------------------*/
+
+//seccion
+.sectionPage__articles
+//item
+.sectionPage__articles__item
+	//figure
+	figure 
+		background: black
+		height    : 96px
+		margin    : 0 18px 0 0
+		overflow  : hidden
+		width     : 170px
+		img 
+			+transition( all 400ms ease )
+		//hover 
+		&:hover 
+			img 
+				+transform( scale( 1.7 ) rotate( 30deg ) )
+ 
+	//title
+	h3.sectionPage__articles__item__title
+		color      : $green_color_title_article
+		font-size  : 20px 
+		font-weight: 600
+	//parrafo
+	p.sectionPage__articles__item__excerpt
+		color    : $gray_color
+		font-size: 14px
+		//link
+		a
+			color          : $violet_color
+			font-weight    : 600 
+			text-decoration: none
+			+transition( all 500ms ease )
+			//hover
+			&:hover 
+				+opacity( 0.9 ) 
+
+/***************************************************************************************/
+/**-------------------------- HEADER   -----------------------------------------------**/
+/***************************************************************************************/
+
+//°| ========= >> header
+.mainHeader
+	padding: 14px 0 0
+
+
+/***************************************************************************************/
+/**-------------------------- NAVIGATION----------------------------------------------**/
+/***************************************************************************************/
+
+//°|=============>> navegacion principal
+.mainNavigation
+	ul
+		//main menu
+		&.mainMenu
+			border-top: 1px solid rgba(0,0,0,.2)
+			margin    : 12px auto 0 
+			padding   : 0 
+
+			li 
+				display   : inline-block
+				+transition( all 500ms ease )
+
+				//activo
+				&:hover,&.current-menu-item, &.current_page_item
+					background: $skyblue_color 
+					a
+						color: white
+						+rotateX( 360deg )
+
+				a 
+					color          : $gray_color
+					display        : block
+					font-size      : 14px
+					line-height    : 1rem
+					padding        : 14px
+					text-decoration: none
+					+transition( all 500ms ease )
+
+
+
+/***************************************************************************************/
+/**-------------------------- PAGINA DE INICIO PORTADA -------------------------------**/
+/***************************************************************************************/
+
+//°|| ===========>> SLIDER
+.pageInicio__slider
+	.carousel-inner
+		.carousel-item
+			.carousel-caption
+				bottom : initial
+				left   : 15%
+				padding: 0
+				right  : initial 
+				top    : 15%
+				//titulo
+				h3
+					font-size  : 3.125em
+					font-weight: 700
+				//parrafo
+				p 
+					font-size: 1.25em 
+					width    : 70%
+
+//°|| ============>> SECCION SERVICIOS
+.pageInicio__section-service
+	//background: $gray_bg
+	padding   : 35px 0
+
+	//CONTENEDOR CAROUSEL SERVICIO
+	.pageInicio__section-service__carousel
+		border-top: 1px solid black
+		padding   : 30px 0 0 0
+
+	//ITEM SERVICIO
+	.item-servicio
+		position: relative
+		//titulo
+		.img-servicio__title
+			+transition( all 500ms ease )
+			background : $gray_color
+			border     : 1px solid transparent
+			bottom     : 0
+			color      : white
+			font-size  : 20px
+			font-weight: 500
+			left       : 0
+			margin     : 10px auto 0
+			padding    : 5px
+			/*position   : absolute*/
+			right      : 0
+			text-align : center
+
+		//hover
+		&:hover 
+			//
+			//titulo
+			.img-servicio__title
+				background: $skyblue_color
+				color     : white
+
+//°|| ============>> SECCION PRESENTACION
+.pageInicio__section-presentation
+	background: url("../images/pages/inicio/bg-nosotros.jpg") no-repeat
+
+
+/***************************************************************************************/
+/**-------------------------- FOOTER  -----------------------------------------------**/
+/***************************************************************************************/
+
+.mainFooter
+	background     : url("../images/footer/bg-footer.jpg") no-repeat 
+	background-size: 100% 100% 
+	color          : white 
+	margin         : 70px auto 0
+	padding        : 27px 
+
+	ul
+		padding        : 0
+		
+		//lista de contacto
+		&.mainFooter__contact-list
+			li 
+				font-size: 14px
+				margin   : 5px auto
+				padding  : 0 0 0 30px
+
+				//before
+				&:before
+					background-repeat: no-repeat
+					background-size  : 100% 100% !important
+					content          : " "
+					display          : inline-block
+					height           : 15px
+					margin           : 0 4px 0 -22px
+					vertical-align   : middle
+					width            : 15px
+
+				//direccion
+				&.address
+					&:before 
+						background: url("../images/contacto/iconos_contacto_direccion.png")			
+				//phone
+				&.phone
+					&:before 
+						background: url("../images/contacto/iconos_contacto_telefono.png")			
+				//email
+				&.email
+					&:before 
+						background: url("../images/contacto/iconos_contacto_mail.png")
+
+
+
+		//menu de redes sociales 
+		&.mainFooter__social-list
+			margin: 16px auto
+			li 
+				display: inline-block
+				padding: 0 2px
+				a 
+					display: block
+					img
+						+transition( all 500ms ease )
+						position: relative
+						z-index : 9999 
+
+					//hover
+					&:hover
+						img  
+							+scale( 1.2 ) 
+
+
+
+//subtitulos en el footer
+.mainFooter__subtitle
+	color      : white 
+	font-size  : 15px
+	font-weight: 700 
+	margin     : 0 auto
