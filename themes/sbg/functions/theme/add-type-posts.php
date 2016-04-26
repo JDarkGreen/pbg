@@ -2,7 +2,7 @@
 
 //Archivo que contiene todos los nuevos tipos creados en el tema
 
-function pretelli_create_post_type(){
+function create_post_type(){
 
 	/*|>>>>>>>>>>>>>>>>>>>> BANNERS  <<<<<<<<<<<<<<<<<<<<|*/
 	
@@ -22,7 +22,7 @@ function pretelli_create_post_type(){
 		'labels'      => $labels,
 		'has_archive' => true,
 		'public'      => true,
-		'hierachical' => false,
+		'hierachical' => true,
 		'supports'    => array('title','editor','excerpt','custom-fields','thumbnail','page-attributes'),
 		'taxonomies'  => array('post-tag','banner_category'),
 		'menu_icon'   => 'dashicons-visibility',
@@ -43,26 +43,24 @@ function pretelli_create_post_type(){
 	);
 
 	$args2 = array(
-		'labels'          => $labels2,
-		'has_archive'     => true,
-		'public'          => true,
-		'hierachical'     => false,
-		'supports'        => array('title','editor','excerpt','custom-fields','thumbnail','page-attributes'),
-		'taxonomies'      => array('post-tag','category'),
-		'menu_icon'       => 'dashicons-exerpt-view',
+		'labels'      => $labels2,
+		'has_archive' => true,
+		'public'      => true,
+		'hierachical' => false,
+		'supports'    => array('title','editor','excerpt','custom-fields','thumbnail','page-attributes'),
+		'taxonomies'  => array('post-tag','category','servicio_category'),
+		'menu_icon'   => 'dashicons-exerpt-view',
 	);
 
 
-
-
 	/*|>>>>>>>>>>>>>>>>>>>> REGISTRAR  <<<<<<<<<<<<<<<<<<<<|*/
-	register_post_type('banner',$args);
-	register_post_type('servicio',$args2);
+	register_post_type( 'banner'   , $args  );
+	register_post_type( 'servicio' , $args2 );
 	
 	flush_rewrite_rules();
 }
 
-add_action( 'init', 'pretelli_create_post_type' );
+add_action( 'init', 'create_post_type' );
 
 
 

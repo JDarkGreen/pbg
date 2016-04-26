@@ -210,7 +210,8 @@ body,html
 			padding   : 0 
 
 			li 
-				display   : inline-block
+				display : inline-block
+				position: relative
 				+transition( all 500ms ease )
 
 				//activo
@@ -228,7 +229,10 @@ body,html
 					padding        : 14px
 					text-decoration: none
 					+transition( all 500ms ease )
-
+		
+		//submenu
+		&.sub-menu
+			position: absolute
 
 /***************************************************************************************/
 /**-------------------------- PAGINA DE INICIO PORTADA -------------------------------**/

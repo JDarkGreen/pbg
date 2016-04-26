@@ -9,7 +9,7 @@
 			<!-- logo  -->
 			<div class="col-xs-12 col-sm-4 container-flex container-flex-center">
 				<a href="<?= site_url()  ?>" class="text-xs-center">
-					<img src="<?= IMAGES ?>/footer/logo_blanco_pretelli.png" alt="logo-footer" class="center-block img-fluid" />
+					<img src="<?= IMAGES ?>/footer/logo_blanco_pbg.png" alt="logo-footer" class="center-block img-fluid" />
 				</a> <!-- /.center-block -->
 			</div><!-- /.col-xs-12 col-sm-4 -->
 
@@ -63,7 +63,7 @@
 				</ul><!-- /mainFooter__social-list  -->	
 
 				<!-- Logo petrelli pagina web -->
-				<a href="<?= site_url() ?>" class="text-xs-right"> <img src="<?= IMAGES ?>/footer/www_grupo_pretelli.png" alt="" class="img-fluid" /></a>
+				<a href="<?= site_url() ?>" class="text-xs-right"> <img src="<?= IMAGES ?>/footer/www_pbg.png" alt="" class="img-fluid" /></a>
 
 			</div><!-- /.col-xs-12 col-sm-4 -->
 		</div><!-- /.row -->
