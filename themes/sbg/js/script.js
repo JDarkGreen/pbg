@@ -25,8 +25,7 @@ var j = jQuery.noConflict();
 			responsiveClass: true,
 			mouseDrag      : false,
 			autoplayTimeout: 2500,
-			fluidSpeed     : 250,
-			smartSpeed     : 250,
+			fluidSpeed     : 1500,
 			responsive:{
 		        320:{
 		            items:1
@@ -58,7 +57,23 @@ var j = jQuery.noConflict();
 			speed   : 1500,
 			visible : 3,	
   	});
-
+		/*|-
+		---------------------------------------------------------------------|*/
+		/*|-----  CAROUSEL EMPRESA - PAGINA EMPRESA  ------|*/
+		/*|----------------------------------------------------------------------|*/
+  	j("#carousel-gallery-empresa").owlCarousel({
+			autoplay       : true,
+			autoplayTimeout: 2500,
+			dots           : true,
+			fluidSpeed     : 2000,
+			items          : 1,
+			lazyLoad       : false,
+			loop           : true,
+			mouseDrag      : false,
+			nav            : false,
+			responsiveClass: true,
+			smartSpeed     : 2000,
+		});
 
 
 	});

@@ -30,6 +30,41 @@ function sbg_customize_register($wp_customize) {
 		'settings' => 'sbg_custom_settings[logo]'
 	)));
 
+	/*|-----------------------------------------------------------------------|*/
+	/*|-----------------------------------------------------------------------|*/
+
+	####>>>>>>>>>>>> MISION Y VISIÓN >>>>>>>>>>>>>>>>>>
+	$wp_customize->add_section('sbg_mision_vision', array(
+		'title' => __('Misión y Visión Empresa', 'sbg-framework'),
+		'description' => __('Sección Misión y Visión Empresa', 'sbg-framework'),
+		'priority' => 41
+	));	
+	/* MISION */
+	$wp_customize->add_setting('sbg_custom_settings[text_mision]', array(
+		'default' => '',
+		'type' => 'option'
+	));
+	$wp_customize->add_control('sbg_custom_settings[text_mision]', array(
+		'label'    => __('Escribe el texto MISIÓN', 'sbg-framework'),
+		'section'  => 'sbg_mision_vision',
+		'settings' => 'sbg_custom_settings[text_mision]',
+		'type'     => 'textarea'
+	));	
+	/* VISION */
+	$wp_customize->add_setting('sbg_custom_settings[text_vision]', array(
+		'default' => '',
+		'type' => 'option'
+	));
+	$wp_customize->add_control('sbg_custom_settings[text_vision]', array(
+		'label'    => __('Escribe el texto VISIÓN', 'sbg-framework'),
+		'section'  => 'sbg_mision_vision',
+		'settings' => 'sbg_custom_settings[text_vision]',
+		'type'     => 'textarea'
+	));
+
+	/*|-----------------------------------------------------------------------|*/
+	/*|-----------------------------------------------------------------------|*/
+
 	####>>>>>>>>>>>> REDES SOCIALES >>>>>>>>>>>>>>>>>>
 	$wp_customize->add_section('sbg_redes_sociales', array(
 		'title' => __('Redes Sociales', 'sbg-framework'),
