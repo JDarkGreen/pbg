@@ -121,6 +121,10 @@ body,html
 	border-left: 3px solid $gray_color
 	color      : $blue_color
 	padding    : 0 0 0 11px 
+	border-bottom: 0 
+	//before
+	&:before
+		border: none !important
 
 
 /*°|| ================>> BANNER DE PÁGINAS <<==========================*/
@@ -343,6 +347,11 @@ body,html
 /**-------------------------------- PAGINA EMPRESA  ----------------------------------**/
 /***************************************************************************************/
 
+.pageEmpresa
+	//todos los parrafos 
+	p 
+		font-size: 14px
+
 //°||==========>>> Galería de Imágenes
 .pageEmpresa__gallery
 	//controles
@@ -367,7 +376,33 @@ body,html
 			z-index      : 999999
 			//estado activo
 			&.active 
-				background: $violet_color
+				background: $blue_color
+
+//Titulos de la Sección 
+.pageEmpresa__title
+	border-left: 3px solid $skyblue_color
+	color      : $blue_color
+	font-size  : 24px
+	font-weight: 600
+	margin     : 0 auto 13px
+	padding    : 0 0 0 15px
+
+//°||========>>> PRIMERA SECCION SUPERIOR INFORMACION Y GALERIA
+.pageEmpresa__content
+	margin: 38px auto
+
+//°||========>>> SEGUNDA SECCION MISION Y VISION 
+.pageEmpresa__mision
+	//cuadros de informacion - article
+	.article-box-information
+		background: $skyblue_color
+		color     : white 
+		margin    : 0 auto 15px
+		padding   : 40px 28px
+		//parrafos
+		p 
+			margin: 0 auto
+
 
 
 /***************************************************************************************/
@@ -434,8 +469,6 @@ body,html
 					&:hover
 						img  
 							+scale( 1.2 ) 
-
-
 
 //subtitulos en el footer
 .mainFooter__subtitle

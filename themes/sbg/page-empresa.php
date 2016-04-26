@@ -30,18 +30,18 @@
 </section> <!-- /.pageCommon__banner -->
 
 <!-- SECCION DE INFORMACION DE LA EMPRESA -->
-<section class="pageEmpresa">
+<section class="pageEmpresa pageEmpresa__content">
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-6">
+			<div class="col-xs-12 col-sm-6">
 				<!-- Titulo -->
-				<h2 class="pageEmpresa__title"><?php _e('Empresa', LANG ); ?></h2>
+				<h2 class="pageEmpresa__title text-uppercase"><?php _e('Empresa', LANG ); ?></h2>
 				<!-- texto -->
 				<?php $info_empresa = $post->post_content; if( !empty($info_empresa) ) : ?>
 					<?= apply_filters('the_content', $info_empresa ); ?>
 				<?php endif; ?>
-			</div> <!-- /.col-xs-6 -->
-			<div class="col-xs-6">
+			</div> <!-- /.col-xs-12 col-sm-6 -->
+			<div class="col-xs-12 col-sm-6">
 				<!-- Imagenes Galeria -->
 				<section id="carousel-gallery-empresa" class="pageEmpresa__gallery">
 					<?php  
@@ -64,7 +64,7 @@
 						</div><!-- /.item -->
 					<?php endforeach; ?>
 				</section> <!-- ./pageEmpresa__gallery -->
-			</div> <!-- /.col-xs-6 -->
+			</div> <!-- /.col-xs-12 col-sm-6 -->
 		</div> <!-- /.row -->
 	</div> <!-- /.container -->
 </section> <!-- /.pageEmpresa -->
@@ -74,24 +74,36 @@
 	<div class="container">
 		<div class="row">
 			<!-- VISION -->
-			<div class="col-xs-6">
+			<div class="col-xs-12 col-sm-6">
 				<!-- Titulo -->
 				<h2 class="pageEmpresa__title text-uppercase"><?php _e('visión', LANG ); ?></h2>
 				<?php $vision = $options['text_mision']; if( !empty($vision) ) : ?>
-					<?= apply_filters('the_content' , $vision ); ?>
+					<article class="article-box-information">
+						<?= apply_filters('the_content' , $vision ); ?>
+					</article> <!-- /.article-box-information -->
 				<?php endif; ?>
 			</div> <!-- /.col-xs-6 -->
 			<!-- MISION -->
-			<div class="col-xs-6">
+			<div class="col-xs-12 col-sm-6">
 				<!-- Titulo -->
 				<h2 class="pageEmpresa__title text-uppercase"><?php _e('misión', LANG ); ?></h2>
 				<?php $mision = $options['text_mision']; if( !empty($mision) ) : ?>
-					<?= apply_filters('the_content' , $mision ); ?>
+					<article class="article-box-information">
+						<?= apply_filters('the_content' , $mision ); ?>
+					</article> <!-- /.article-box-information -->
 				<?php endif; ?>
 			</div> <!-- /.col-xs-6 -->
 		</div> <!-- /.row -->
 	</div><!-- /.container -->
 </section> <!-- /.pageEmpresa pageEmpresa__mision -->
+
+<!-- Linea Separadora -->
+<div class="container">
+	<div class="line-separator"></div>
+</div>
+
+<!-- Incluir Plantilla Miscelaneo -->
+<?php include( locate_template("partials/miscelaneo.php") ); ?>
 
 <!-- Get Header -->
 <?php get_footer(); ?>

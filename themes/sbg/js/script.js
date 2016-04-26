@@ -19,13 +19,13 @@ var j = jQuery.noConflict();
 			items          : 4,
 			lazyLoad       : false,
 			loop           : true,
-			margin         : 12,
+			margin         : 0,
 			nav            : false,
 			autoplay       : true,
 			responsiveClass: true,
 			mouseDrag      : false,
 			autoplayTimeout: 2500,
-			fluidSpeed     : 1500,
+			fluidSpeed     : 1000,
 			responsive:{
 		        320:{
 		            items:1
