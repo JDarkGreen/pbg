@@ -191,7 +191,7 @@ function sbg_customize_register($wp_customize) {
 	));
 	
 	$wp_customize->add_control('sbg_custom_settings[widget_nosotros]', array(
-		'label'    => __('Escribe contenido que ira en widget nosotros en el footer', 'sbg-framework'),
+		'label'    => __('Escribe contenido que ira en sección nosotros - PORTADA', 'sbg-framework'),
 		'section'  => 'sbg_widget_nosotros',
 		'settings' => 'sbg_custom_settings[widget_nosotros]',
 		'type'     => 'textarea'

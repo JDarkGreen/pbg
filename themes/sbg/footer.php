@@ -1,6 +1,6 @@
 
 <!-- Extraer opciones  -->
-<?php $options = get_option('pretelli_custom_settings'); ?>
+<?php $options = get_option('sbg_custom_settings'); ?>
 
 <footer class="mainFooter">
 	<div class="container">
